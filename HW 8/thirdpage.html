@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <script>
+        function validateForm() {
+
+            var fname = document.getElementById("Name");
+            var Aemail = document.getElementById("Email");
+            var terms = document.getElementById("terms");
+
+            fname.style.backgroundColor = "";
+            Aemail.style.backgroundColor = "";
+
+            var valid = true;
+
+            if (fname.value == "") {
+                fname.style.backgroundColor = "red";
+                fname.focus();
+                valid = false;
+
+            }
+
+            if (Aemail.value == "") {
+                Aemail.style.backgroundColor = "red";
+                Aemail.focus();
+                valid = false;
+            }
+            if (terms.checked == false) {
+                alert("Accept Terms");
+                valid = false;
+            }
+            return valid;
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Contact Us</h1>
+
+    <form onsubmit= "return validateForm()">
+
+        <p> Name: <input type="text" id="Name"></p>
+        <p> Email: <input type="text" id="Email"></p>
+        <p>
+            <input type="checkbox" id="terms" required>
+            <label for="terms">Accept Terms of Agreement</label>
+        </p>
+
+        <button type="submit" id="btnSubmit">submit here</button>
+
+    </form>
+
+    <a href="index.html.html">Index</a>
+    <br />
+    <a href="secondpage.html">Second Page</a>
+</body>
+
+</html>
