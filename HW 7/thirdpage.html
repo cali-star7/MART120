@@ -1,0 +1,72 @@
+<html>
+
+<head>
+      <title>Class Example</title>
+      <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        function validateForm() {
+
+            var fname = document.getElementById("Name");
+            var Aemail = document.getElementById("Email");
+            var terms = document.getElementById("terms");
+
+            fname.style.backgroundColor = "";
+            Aemail.style.backgroundColor = "";
+
+            var valid = true;
+
+            if (fname.value == "") {
+                fname.style.backgroundColor = "red";
+                fname.focus();
+                valid = false;
+
+            }
+
+            if (Aemail.value == "") {
+                Aemail.style.backgroundColor = "red";
+                Aemail.focus();
+                valid = false;
+            }
+            if (terms.checked == false) {
+                alert("Accept Terms");
+                valid = false;
+            }
+            return valid;
+
+        }
+    </script>
+    <style>
+        body {background-image:url("bernard.jpg")}
+            h1{ font-size:larger}
+            p{font-size:medium}
+    
+    </style>
+</head>
+
+<body>
+
+    <h1>Contact Us</h1>
+
+    <form onsubmit= "return validateForm()">
+
+        <p> Name: <input type="text" id="Name"></p>
+        <p> Email: <input type="text" id="Email"></p>
+        <p>
+            <input type="checkbox" id="terms" required>
+            <label for="terms">Accept Terms of Agreement</label>
+        </p>
+
+        <button type="submit" id="btnSubmit" class="btn btn-warning">submit here</button>
+
+    </form>
+
+    <a href="index.html.html">Index</a>
+    <br />
+    <a href="secondpage.html">Second Page</a>
+</body>
+
+</html>
